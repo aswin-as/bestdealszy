@@ -103,3 +103,120 @@ main {
 .deals p {
 	margin
 }
+
+
+/* testing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    height: 50vh;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li.active a,
+  nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* hide the menu items when the screen is smaller than 768px */
+  @media screen and (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+    
+    nav.active ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 5rem;
+      right: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 1rem;
+    }
+    
+    nav.active ul li {
+      margin: 0.5rem 0;
+    }
+    
+    nav.active ul li a {
+      color: #fff;
+      text-align: center;
+    }
+    
+    nav.active .hamburger::before {
+      transform: rotate(45deg);
+    }
+    
+    nav.active .hamburger::after {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  /* style the hamburger icon */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger::before {
+    top: -8px;
+  }
+  
+  .hamburger::after {
+    bottom: -8px;
+  }
+  
+  /* show the hamburger icon when the screen is smaller than 768px */
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  

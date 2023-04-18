@@ -1,79 +1,103 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharathamatha College of Arts and Science</title>
+   
     <link rel="stylesheet" href="contact.css">
-  </head>
-  <body>
-    <header>
-      <h1 class="cm">Contact Me</h1>
-    </header>
-    <main>
-        <section>
-      <h2>Get in touch</h2>
-      <p>Thank you for your interest in BestDealszy! If you have any questions, comments, or suggestions, please don't hesitate to contact me using the form below.</p>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 
-       <p> I am committed to providing exceptional customer service and will do my best to respond to your inquiry as soon as possible. Please provide as much detail as possible so that I can better assist you.:</p>
-     
-    </section>
-      <section class="contact-us" id="contact">
-        <h1>&#8594;Contact Us	&#8592;</h1>
-        <div class="row">
-            <div class="contact-col">
-                <h5>BestDealszy</h5>
-                <p>kozhinjampara (po), Palakkad - 678554</p>
-                <P>Phone : <a href="tel:7025138765">7025138765</a> </P>
-                <p>Email : <a href="mailto:aswin.as.mystory@gmail.com" target="_blank">aswin.as.mystory@gmail.com</a></p>
-               
-            </div>
+   <script src="https://kit.fontawesome.com/cf5c71a3b3.js" crossorigin="anonymous"></script>
+    
 
-            <div class="contact-col">
-                <form action="https://formspree.io/f/xvolrgve"   method="post" autocomplete="off" id="my-form">
-        
-                    <input type="text" name="name" id="name" placeholder="Name" required >
-                    <br>
-                  
-                    <input type="email" name="email" id="email" placeholder="email" required>
-                    <br>
-                 
-                    <input type="number" name="phone" id="phone" maxlength="10" placeholder="Phone" required>
-                    <br>
-                    
-                    <textarea name="message" id="message" placeholder="Your Message" ></textarea>
-                    <br>
-                    <input type="submit" class="sbt-btn">
-                    <p id="my-form-status"></p>
-                </form>
-            </div>
-        </div>
-    </section>
-    </main>
-    <footer>
-      <p>Copyright © 2023</p>
-    </footer>
-
-    <script>
-        var form = document.getElementById("my-form");
+    
+</head>
+<body>
+   
+    <header class="head">
+        <h1 class="cm">Contact Me</h1>
+      </header>
       
-      async function handleSubmit(event) {
-        event.preventDefault();
-        var status = document.getElementById("my-form-status");
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-          method: form.method,
-          body: data,
-          headers: {
-              'Accept': 'application/json'
+   
+
+    <section class="gnt">
+        <h2>Get in touch</h2>
+        <p>Thank you for your interest in BestDealszy! If you have any questions, comments, or suggestions, please don't hesitate to contact me using the form below.</p>
+  
+         <p> I am committed to providing exceptional customer service and will do my best to respond to your inquiry as soon as possible. Please provide as much detail as possible so that I can better assist you.:</p>
+       
+      </section>    
+
+        <section class="contact-us" id="contact">
+            <h1>&#8594;Contact Us	&#8592;</h1>
+            <div class="row">
+                <div class="contact-col">
+                    <h5>BestDealszy</h5>
+                    <p>kozhinjampara (po), Palakkad - 678554</p>
+                    <P>Phone : <a href="tel:7025138765">7025138765</a> </P>
+                    <p>Email : <a href="mailto:aswin.as.mystory@gmail.com" target="_blank">aswin.as.mystory@gmail.com</a></p>
+                   
+                   
+                </div>
+
+                <div class="contact-col">
+                    <form action="https://formspree.io/f/xvolrgve"   method="post" autocomplete="off" id="my-form">
+            
+                        <input type="text" name="name" id="name" placeholder="Name" required >
+                        <br>
+                      
+                        <input type="email" name="email" id="email" placeholder="email" required>
+                        <br>
+                     
+                        <input type="number" name="phone" id="phone" maxlength="10" placeholder="Phone" required>
+                        <br>
+                        
+                        <textarea name="message" id="message" placeholder="Your Message" ></textarea>
+                        <br>
+                        <input type="submit" class="sbt-btn">
+                        <p id="my-form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+   
+
+
+         <footer>
+            <p>Copyright © 2023</p>
+          </footer>
+      
+       
+
+        <script>
+            var form = document.getElementById("my-form");
+          
+          async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+              method: form.method,
+              body: data,
+              headers: {
+                  'Accept': 'application/json'
+              }
+            }).then(response => {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            }).catch(error => {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            });
           }
-        }).then(response => {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset()
-        }).catch(error => {
-          status.innerHTML = "Oops! There was a problem submitting your form"
-        });
-      }
-      form.addEventListener("submit", handleSubmit)
-  </script>
-  </body>
+          form.addEventListener("submit", handleSubmit)
+      </script>
+
+</body>
 </html>
+
+
+
+

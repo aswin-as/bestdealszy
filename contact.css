@@ -1,3 +1,6 @@
+.cm{
+    color:white;
+}
 *{
     margin: 0;
     padding: 0;
@@ -364,4 +367,25 @@ footer p{
     .fa-solid:active{
         color: red;
     }
+}
+
+
+
+/* 
+gnt */
+
+.gnt{
+    width: 85%;
+    margin: 0 auto;
+    
+}
+.head{
+    color:white;
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+    background-color: rgb(3, 3, 165);
+}
+.cm{
+    color:white;
+    text-align: center;
 }
