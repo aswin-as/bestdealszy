@@ -9,33 +9,49 @@ header {
 	padding: 20px;
 }
 
-nav {
-	display: flex;
-	justify-content: center;
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
 }
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+nav img{
+    width: 99px;
 }
-
-nav li {
-	margin: 0 10px;
+.nav-links{
+    flex: 1;
+    text-align: right;
 }
-
-nav a {
-	display: block;
-	padding: 10px;
-	color: #fff;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: uppercase;
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
 }
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-family:popins,sans-serif;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+nav .fa{
+    display: none;
 
+}
 nav a:hover {
-	background-color: #fff;
+	/* background-color: #fff; */
 	color: #2f4f4f;
 }
 
@@ -95,128 +111,186 @@ main {
 	margin-bottom: 10px;
 }
 
+.odeals{
+    color: whitesmoke;
+}
+
 .deals h3 {
 	margin-top: 0;
 	font-size: 1.5rem;
 }
 
-.deals p {
-	margin
-}
 
 
-/* testing */
+/* style from bmc website */
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
+
+
+/* footer */
+
+/* footer{
+    background-color: black;
+    width: 100%;
+    padding: 10px 50px;
   
-  header {
-    height: 50vh;
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  nav ul li.active a,
-  nav ul li a:hover {
-    background-color: #fff;
-    color: #333;
-  }
-  
-  /* hide the menu items when the screen is smaller than 768px */
-  @media screen and (max-width: 768px) {
-    nav ul {
-      display: none;
-    }
+}
+footer p{
+    color: whitesmoke;
+} */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
     
-    nav.active ul {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 5rem;
-      right: 0;
-      width: 100%;
-      background-color: #333;
-      padding: 1rem;
-    }
-    
-    nav.active ul li {
-      margin: 0.5rem 0;
-    }
-    
-    nav.active ul li a {
-      color: #fff;
-      text-align: center;
-    }
-    
-    nav.active .hamburger::before {
-      transform: rotate(45deg);
-    }
-    
-    nav.active .hamburger::after {
-      transform: rotate(-45deg);
-    }
-  }
+    padding: 10px 50px;
   
-  /* style the hamburger icon */
-  .hamburger {
+}
+footer p{
+    color: whitesmoke;
+}
+
+
+
+
+@media (max-width:700px){
+    .text-box h1{
+        font-size: 30px;
+    }
+    nav ul{
+        display: none;
+    }
+    /* .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0%;
+        right: -500px;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    } */
+
+    body{
+        margin-bottom: 165px;
+    }
+    footer{
+        padding: 10px 10px;
+        margin-bottom: 50px;
+    }
+   
+  
+
+}
+
+
+
+
+/* afa */
+#row{
     display: none;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-  }
-  
-  .hamburger::before {
-    top: -8px;
-  }
-  
-  .hamburger::after {
-    bottom: -8px;
-  }
-  
-  /* show the hamburger icon when the screen is smaller than 768px */
-  @media screen and (max-width: 768px) {
-    .hamburger {
-      display: block;
+    background-color: grey;
+    color: whitesmoke;
+}
+#row li {
+    width: 30px;
+    color: whitesmoke;
+}
+.fa-solid{
+    font-size: 30px;
+}
+
+#row li img{
+    color: white;
+}
+
+@media(max-width:700px){
+    #fixed{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
-  }
+    #row{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-around;
+        /* position: fixed;
+        bottom: 0; */
+    }
+    #row li{
+        list-style-type: none
+    }
+    .fa-solid{
+        font-size: 30px;
+        color: whitesmoke;
+    }
+    .fa-solid:hover{
+        color: red;
+    }
+    .fa-solid:active{
+        color: red;
+    }
+
+    
+}
+
+
+/* deals.html */
+
+#odealshome{
   
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+li{
+    list-style: none;
+}
+.fa-house{
+    display: block;
+    width: 10px;
+    height: 10px;
+    color: red;
+}
+
+/* telegram */
+
+#telegram{
+  
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+}
+li{
+    list-style: none;
+}
+.fa-telegram{
+    display: block;
+    width: 10px;
+    height: 10px;
+    color: #0088cc;
+}
+
+#index{
+    margin-bottom: 15px;
+}

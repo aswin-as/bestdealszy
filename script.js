@@ -1,6 +1,10 @@
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
+var menuBtn = document.getElementById('menuBtn');
+var cancel = document.getElementById('cancel');
 
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
+menuBtn.addEventListener('click',function(){
+    document.querySelector('.menu_screen').style.visibility = 'visible';
+  });
+
+  cancel.addEventListener('click',function(){
+    document.querySelector('.menu_screen').style.visibility = 'hidden';
+  });

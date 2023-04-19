@@ -389,3 +389,21 @@ gnt */
     color:white;
     text-align: center;
 }
+
+
+/* home button */
+#odealshome{
+  
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+li{
+    list-style: none;
+}
+.fa-house{
+    display: block;
+    width: 10px;
+    height: 10px;
+    color: red;
+}
